@@ -1,6 +1,7 @@
 import NavSearch from "./NavSearch";
 import LinksDropdown from "./LinksDropdown";
 import DarkMode from "./DarkMode";
+import Logo from "./Logo";
 
 function Navbar() {
   return (
