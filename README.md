@@ -1597,7 +1597,7 @@ export const uploadImage = async (image: File) => {
 export const updateProfileImageAction = async (
   prevState: any,
   formData: FormData
-): Promise<{message: string}> => {
+): Promise<{ message: string }> => {
   const user = await getAuthUser();
   try {
     const image = formData.get("image") as File;
