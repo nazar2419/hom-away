@@ -43,7 +43,7 @@ export const generateDateRange = (range: DateRange | undefined): string[] => {
   return dateRange;
 };
 
-export const generateDisabledDatedes = (
+export const generateDisabledDates = (
   disabledDays: DateRange[]
 ): { [key: string]: boolean } => {
   if (disabledDays.length === 0) return {};
