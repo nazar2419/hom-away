@@ -614,3 +614,23 @@ export const fetchReservations = async () => {
   });
   return reservations;
 };
+
+const getAdminUser = async () => {
+  const user = await getAuthUser();
+  if (user.id !== process.env.ADMIN_USER_ID) redirect("/");
+  return user;
+};
+
+export const fetchStats = async () => {
+  await getAdminUser();
+
+  const userCount = await db.profile.count();
+  const propertiesCount = await db.property.count();
+  const bookingsCount = await db.booking.count();
+
+  return {
+    userCount,
+    propertiesCount,
+    bookingsCount,
+  };
+};
