@@ -2,7 +2,7 @@
  
  type StatsCardsProps = {
   title: string;
-  value: number;
+  value: number | string;
  };
 
 
